@@ -22,7 +22,7 @@
     },
 
     _updateStore: function(newValue) {
-      BaseStore.update({ amount: newValue });
+      BaseStore.set({ amount: newValue });
     }
 
   });
