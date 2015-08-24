@@ -70,6 +70,8 @@
         return value;
       }
     };
+
+    return this;
   };
 
 })();
