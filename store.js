@@ -29,7 +29,9 @@
     };
 
     this.deregister = function(fn) {
-      registry.splice(registry.indexOf(fn), 1);
+      var i = registry.indexOf(fn);
+      if (i != -1)
+        registry.splice(i, 1);
     };
 
     this.reset = function() {
