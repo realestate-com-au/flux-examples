@@ -4,11 +4,11 @@
   PriceComponent = React.createClass({
 
     componentWillMount: function() {
-      BaseStore.registerAndInvoke(this._update);
+      PriceStore.registerAndInvoke(this._update);
     },
 
     componentWillUnmount: function() {
-      BaseStore.deregister(this._update);
+      PriceStore.deregister(this._update);
     },
 
     render: function() {
@@ -17,12 +17,12 @@
       );
     },
 
-    _update: function(baseStoreData) {
-      this.setState({ amount: baseStoreData.amount });
+    _update: function(priceStoreData) {
+      this.setState({ amount: priceStoreData.amount });
     },
 
     _updateStore: function(newValue) {
-      BaseStore.set({ amount: newValue });
+      PriceStore.set({ amount: newValue });
     }
 
   });
